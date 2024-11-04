@@ -1,0 +1,14 @@
+@mixin sections-title {
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.2;
+	letter-spacing: 1px;
+}
+
+@mixin dash-lines {
+	content: " \00a0\00a0\00a0\00a0\00a0\00a0";
+	text-decoration: line-through;
+	text-decoration-thickness: 2px;
+	color: $accentColor;
+	margin-inline: 15px;
+}

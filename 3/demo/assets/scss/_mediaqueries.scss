@@ -1,0 +1,27 @@
+@media only screen and (max-width: 768px) {
+	.carousel-caption {
+		h2 {
+			font-size: 1.875rem !important;
+		}
+		p {
+			width: 90%;
+		}
+	}
+	.carousel-control-next,
+	.carousel-control-prev {
+		width: 10% !important;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.nav-menu {
+		display: none;
+	}
+}
+
+@media (min-width: 1024px) {
+	.carousel-caption h2,
+	.carousel-caption p {
+		max-width: 60%;
+	}
+}
