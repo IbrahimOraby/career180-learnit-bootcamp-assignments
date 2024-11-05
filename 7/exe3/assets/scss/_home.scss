@@ -1,0 +1,25 @@
+.dark-theme {
+	background-color: $dark-color;
+	color: $light-color;
+	button {
+		border-color: $light-color;
+		color: $light-color;
+		&:hover {
+			background-color: $light-color;
+			color: $dark-color;
+		}
+	}
+}
+
+.light-theme {
+	background-color: $light-color;
+	color: $dark-color;
+	button {
+		border-color: $dark-color;
+		color: $dark-color;
+		&:hover {
+			background-color: $dark-color;
+			color: $light-color;
+		}
+	}
+}
