@@ -4,14 +4,16 @@ let deafaultTheme, savedTheme
 
 darkLightBtn.addEventListener("click", setThemeToLocalStorage)
 
-//display color theme on screen
+//display color theme on screen and btn text as well
 function setThemeOnScreen(color) {
 	if (color === "light") {
 		body[0].classList.add(`light-theme`)
 		body[0].classList.remove(`dark-theme`)
+		darkLightBtn.innerHTML = "Dark"
 	} else {
 		body[0].classList.add(`dark-theme`)
 		body[0].classList.remove(`light-theme`)
+		darkLightBtn.innerHTML = "Light"
 	}
 }
 

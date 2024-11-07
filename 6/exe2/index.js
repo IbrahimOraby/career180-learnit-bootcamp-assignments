@@ -27,7 +27,7 @@ function displayEmployees(namesArr, salariesArr) {
 	for (let i = 0; i < namesArr.length; i++) {
 		let pEle = document.createElement("p")
 		pEle.innerHTML = `Name: ${namesArr[i]}, Salary: ${salariesArr[i]}$`
-		pEle.classList.add("col-4", "text-center")
+		pEle.classList.add("col", "text-center")
 		employeesInfoEle.appendChild(pEle)
 	}
 }
