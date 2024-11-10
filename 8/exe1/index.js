@@ -12,7 +12,7 @@ let userNames = ["Amir", "Ibrahim", "Nada", "Osama"];
 // console.log(modifyArr(names));
 // console.log(names);
 
-//bonus - custom formatting
+////////////// bonus - custom formatting
 
 function toLowerCaseFormat(arr) {
 	let modifiedArr = [];
@@ -65,7 +65,7 @@ function formattingFunc(userChoice, userArr) {
 
 function customFormatting(userChoice, userArr) {
 	let modifiedArr = [];
-	alert("You will chose any type of formatting to each element");
+	alert("You will choose specifically the type of formatting for each element");
 
 	for (i in userArr) {
 		alert(
@@ -111,8 +111,8 @@ alert(
 );
 
 let userFormatChoice = prompt(
-	`Enter the number for the style you want: (1.Lower Case, 2.Upper Case, 3.Capitalize 4.Custom)`
+	`Enter the number for the style you want: (1.Lower Case, 2.Upper Case, 3.Capitalize, 4.Custom)`
 );
 
-let userOutput = customFormatting(userFormatChoice, userArrInput);
+let userOutput = formattingFunc(userFormatChoice, userArrInput);
 alert(userOutput);
