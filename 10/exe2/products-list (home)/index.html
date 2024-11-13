@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home - Products List</title>
+		<link
+			rel="stylesheet"
+			href="../assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+		/>
+		<link rel="stylesheet" href="./styles.css" />
+		<link rel="stylesheet" href="../assets/scss/main.css" />
+	</head>
+	<body>
+		<main class="container py-4 text-center">
+			<section>
+				<h1>Products List</h1>
+				<div
+					class="search-section d-flex align-items-center justify-content-center m-4"
+				>
+					<input type="search" id="search-bar" class="input-group-text me-2" />
+					<button id="search-btn" class="btn btn-outline-dark">Search</button>
+				</div>
+				<div>
+					<!-- Button trigger modal -->
+					<button
+						type="button"
+						class="btn btn-outline-primary"
+						data-bs-toggle="modal"
+						data-bs-target="#exampleModal"
+					>
+						Add Product
+					</button>
+
+					<!-- Modal -->
+					<div
+						class="modal fade"
+						id="exampleModal"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										Product Info
+									</h1>
+								</div>
+								<div class="modal-body">
+									<form>
+										<!-- name -->
+										<label class="form-label">Title:</label>
+										<input
+											type="text"
+											id="title"
+											name="title"
+											class="form-control mb-3"
+										/>
+										<div class="error" id="titleErr"></div>
+
+										<!-- description -->
+										<label class="form-label">Description:</label>
+										<input
+											type="text"
+											id="description"
+											name="description"
+											class="form-control mb-3"
+										/>
+										<div class="error" id="descriptionErr"></div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Close
+									</button>
+									<button
+										type="button"
+										class="btn btn-primary"
+										id="save-changes-btn"
+									>
+										Submit Product
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="products-list" class="row"></div>
+			</section>
+			<div class="row justify-content-center">
+				<button id="prev" class="btn pagination-btns fs-4 col-lg-3">
+					Previous
+				</button>
+				<button id="next" class="btn pagination-btns fs-4 col-lg-3">
+					Next
+				</button>
+			</div>
+		</main>
+		<script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+		<script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+		<script src="./index.js"></script>
+	</body>
+</html>

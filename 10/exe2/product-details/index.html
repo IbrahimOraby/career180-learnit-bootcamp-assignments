@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Product Details</title>
+		<link
+			rel="stylesheet"
+			href="../assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+		/>
+		<link rel="stylesheet" href="./styles.scss" />
+		<link rel="stylesheet" href="../assets/scss/main.css" />
+	</head>
+	<body>
+		<main class="container py-4 text-center">
+			<section>
+				<h1>Product Details</h1>
+				<div id="products-details"></div>
+			</section>
+			<div
+				class="btns-section d-flex align-items-center justify-content-center gap-2 mt-4"
+			>
+				<div>
+					<!-- Button trigger modal -->
+					<button
+						type="button"
+						class="btn btn-primary"
+						data-bs-toggle="modal"
+						data-bs-target="#exampleModal"
+					>
+						Update Product
+					</button>
+
+					<!-- Modal -->
+					<div
+						class="modal fade"
+						id="exampleModal"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										Product Info
+									</h1>
+								</div>
+								<div class="modal-body">
+									<form>
+										<!-- name -->
+										<label class="form-label">Title:</label>
+										<input
+											type="text"
+											id="title"
+											name="title"
+											class="form-control mb-3"
+										/>
+										<div class="error" id="titleErr"></div>
+
+										<!-- description -->
+										<label class="form-label">Description:</label>
+										<input
+											type="text"
+											id="description"
+											name="description"
+											class="form-control mb-3"
+										/>
+										<div class="error" id="descriptionErr"></div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Close
+									</button>
+									<button
+										type="button"
+										class="btn btn-primary"
+										id="save-changes-btn"
+									>
+										Submit Product
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Button trigger modal -->
+				<div>
+					<button
+						type="button"
+						class="btn btn-danger"
+						data-bs-toggle="modal"
+						data-bs-target="#exampleModal2"
+					>
+						Delete Product
+					</button>
+
+					<!-- Modal -->
+					<div
+						class="modal fade"
+						id="exampleModal2"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel2"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										Delete Confirmation
+									</h1>
+								</div>
+								<div class="modal-body">
+									Are you sure you want delete the product?
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										No
+									</button>
+									<button
+										type="submit"
+										class="btn btn-primary"
+										data-bs-dismiss="modal"
+										id="confirm-delete-btn"
+									>
+										Yes
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+		<script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+		<script src="./index.js"></script>
+	</body>
+</html>

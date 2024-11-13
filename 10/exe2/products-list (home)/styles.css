@@ -1,0 +1,18 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.product-detail-container {
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 1rem;
+}
+.product-detail-container .product-description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pagination-btns:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=styles.css.map */

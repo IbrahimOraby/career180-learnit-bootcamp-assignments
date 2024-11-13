@@ -1,0 +1,17 @@
+@import "./general";
+@import "./variables";
+
+.post-container {
+	border-bottom: 1px solid rgb(211, 211, 211);
+	margin-bottom: 1rem;
+	h3,
+	p {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	&:hover {
+		border: 1px solid rgba($color: rgb(211, 211, 211), $alpha: 0.7);
+	}
+}

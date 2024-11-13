@@ -1,0 +1,13 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.product-detail-container {
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 1rem;
+}
+
+.pagination-btns:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=main.css.map */
