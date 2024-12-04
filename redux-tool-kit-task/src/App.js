@@ -10,19 +10,17 @@ import PostDetails from "./features/posts/PostDetails";
 function App() {
 	return (
 		<Router>
-			<div>
-				<Header />
-				<main>
-					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/about" element={<About />} />
-						<Route path="/contact" element={<Contact />} />
-						<Route path="/post/:id" element={<PostDetails />} />
-						<Route path="*" element={"not found"} />
-					</Routes>
-				</main>
-				<Footer />
-			</div>
+			<Header />
+			<main>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/about" element={<About />} />
+					<Route path="/contact" element={<Contact />} />
+					<Route path="/post/:id" element={<PostDetails />} />
+					<Route path="*" element={"not found"} />
+				</Routes>
+			</main>
+			<Footer />
 		</Router>
 	);
 }

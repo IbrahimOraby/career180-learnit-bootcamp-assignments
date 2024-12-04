@@ -11,7 +11,10 @@ import UpdatePostModal from "../../Components/Modal/UpdatePostModal";
 
 const PostsList = () => {
 	const [showModal, setShowModal] = useState(false);
-	const [currentPost, setCurrentPost] = useState(null);
+	const [currentPost, setCurrentPost] = useState({
+		title: "",
+		body: ""
+	});
 	const dispatch = useDispatch();
 	const posts = useSelector((state) => state.postsData.posts);
 
@@ -27,12 +30,25 @@ const PostsList = () => {
 	};
 
 	const handleShowModal = (post) => {
-		// dispatch action
 		setCurrentPost(post);
 		setShowModal(true);
 	};
+
 	const handleCloseModal = () => {
 		setShowModal(false);
+	};
+
+	const handleUpdatePost = () => {
+		const updatedPostData = {
+			title: currentPost.title,
+			body: currentPost.body
+		};
+		dispatch(
+			updatePost({ postId: currentPost.id, updatedData: updatedPostData })
+		).finally(() => {
+			setShowModal(false);
+			toast.success("Post has been updated successfully");
+		});
 	};
 
 	return (
@@ -87,8 +103,9 @@ const PostsList = () => {
 			<UpdatePostModal
 				showModal={showModal}
 				handleCloseModal={handleCloseModal}
-				handleShowModal={handleShowModal}
 				currentPost={currentPost}
+				handleChangeData={setCurrentPost}
+				handleUpdatePost={handleUpdatePost}
 			/>
 			<ToastContainer />
 		</>
